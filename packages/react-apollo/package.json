@@ -49,7 +49,7 @@
     "dist"
   ],
   "dependencies": {
-    "@nhost/nhost-js": "workspace:*",
+    "@nhost/nhost-js": "^0.3.13",
     "subscriptions-transport-ws": "^0.11.0"
   },
   "peerDependencies": {

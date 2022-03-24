@@ -143,7 +143,7 @@ importers:
       express: ^4.17.2
       typescript: ^4.5.4
     dependencies:
-      '@nhost/nhost-js': link:../../packages/nhost-js
+      '@nhost/nhost-js': 0.3.13
     devDependencies:
       '@types/express': 4.17.13
       express: 4.17.2
@@ -193,9 +193,9 @@ importers:
       '@craco/craco': 6.4.3_4aa4ff7e3a066977318d29b1bedd23d1
       '@headlessui/react': 1.4.3_react-dom@17.0.2+react@17.0.2
       '@heroicons/react': 1.0.5_react@17.0.2
-      '@nhost/nhost-js': link:../../packages/nhost-js
-      '@nhost/react-apollo': link:../../packages/react-apollo
-      '@nhost/react-auth': link:../../packages/react-auth
+      '@nhost/nhost-js': 0.3.13
+      '@nhost/react-apollo': 2.1.5_5968641e810e1e9dbee61b781da15c43
+      '@nhost/react-auth': 2.0.11_react-dom@17.0.2+react@17.0.2
       '@saeris/apollo-server-vercel': 1.0.1_graphql@15.7.2
       '@tailwindcss/forms': 0.3.4_00c8fcea36e7ebb784460590946ebc50
       '@testing-library/jest-dom': 5.16.2
@@ -273,7 +273,7 @@ importers:
   packages/react-apollo:
     specifiers:
       '@apollo/client': ^3.5.8
-      '@nhost/nhost-js': workspace:*
+      '@nhost/nhost-js': ^0.3.13
       '@types/react': ^17.0.39
       '@types/ws': ^8.2.2
       graphql: 15.7.2
@@ -281,7 +281,7 @@ importers:
       react-dom: ^17.0.2
       subscriptions-transport-ws: ^0.11.0
     dependencies:
-      '@nhost/nhost-js': link:../nhost-js
+      '@nhost/nhost-js': 0.3.13
       subscriptions-transport-ws: 0.11.0_graphql@15.7.2
     devDependencies:
       '@apollo/client': 3.5.8_03bf9288e5c3a1c712f16f9f9a62dbf9
@@ -3364,6 +3364,97 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@nhost/hasura-auth-js/0.1.14:
+    resolution: {integrity: sha512-QXPxpPIeqYDUTFmNpzSXyIyzVqc8JzNZiDuD2Uc6JHnEfz7othQQPzQXO6B0BaJAr+0BPhQXerUoDwLOUgG2ag==}
+    dependencies:
+      axios: 0.25.0
+      jwt-decode: 3.1.2
+      query-string: 7.1.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@nhost/hasura-auth-js/0.1.15:
+    resolution: {integrity: sha512-KIZW0gqTsuZz0HKEA4UZPolmHOn6RVVVwy2WwUn/amFREJfDN4O4JrzZjUQUYSLn9Dx7wOCIf2ij2tkXKhcLaQ==}
+    dependencies:
+      axios: 0.25.0
+      jwt-decode: 3.1.2
+      query-string: 7.1.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@nhost/hasura-storage-js/0.0.11:
+    resolution: {integrity: sha512-EY0xbQNg/j45bLyJ+awnjXvyTBNTS668S+OqFnzHjKznSqOhHCLpyh2k0cI3vWTDHyuAbweP4ScvSipCJ0t9uA==}
+    dependencies:
+      axios: 0.21.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@nhost/hasura-storage-js/0.1.0:
+    resolution: {integrity: sha512-XkmU8N3lvw9hm2o4NbXqjRc+X07TAicw3qlmoTQ+QFSLLzDUfr2L2u7j4UYsj5i8Nxxl+EaB/7hYOIH/+d+fzA==}
+    dependencies:
+      axios: 0.21.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@nhost/nhost-js/0.3.11:
+    resolution: {integrity: sha512-D4pvXHlYW+fxwGxAyQGBWenuXAOpZI2ccErhBU9GaGgHXTxJoRKOhc29YJaZjCe1UdJhBTvJRBw5tZ19do3hZw==}
+    dependencies:
+      '@nhost/hasura-auth-js': 0.1.14
+      '@nhost/hasura-storage-js': 0.0.11
+      axios: 0.23.0
+      jwt-decode: 3.1.2
+      query-string: 7.1.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@nhost/nhost-js/0.3.13:
+    resolution: {integrity: sha512-kg85sZjWmsvW3Se7MfJAEUkurN4dWb+b5f54EFMSIJ/62x8Rj3whoBzpjgN/CXtv1QTt3I+YqT9RNpEP/Z+jBQ==}
+    dependencies:
+      '@nhost/hasura-auth-js': 0.1.15
+      '@nhost/hasura-storage-js': 0.1.0
+      axios: 0.23.0
+      jwt-decode: 3.1.2
+      query-string: 7.1.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@nhost/react-apollo/2.1.5_5968641e810e1e9dbee61b781da15c43:
+    resolution: {integrity: sha512-1KBBewufyV8n40tWyN3e2/W+77Zz/XWxhWAZmMZ2QENFwJrODzjG1zsfqaqpqh/s1ii3GO4RdWLtm9R1fVqXnw==}
+    peerDependencies:
+      graphql: ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@nhost/nhost-js': 0.3.11
+      graphql: 15.7.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      subscriptions-transport-ws: 0.11.0_graphql@15.7.2
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - utf-8-validate
+    dev: false
+
+  /@nhost/react-auth/2.0.11_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-E4wvFkg+Nwg06PR7n/E1joGZchSLIh/kEcLo+ePOnCYJPrjP0+ita6HC+OHsGNWtVWL1OU+jHlUNKIpCWUqgyQ==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@nhost/nhost-js': 0.3.13
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
